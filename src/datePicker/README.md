@@ -11,7 +11,7 @@ Author：[@dunizb](https://github.com/dunizb)
 ## Install
 引入`cl-date-picker.vue`
 
-## Usain
+## Usage
 
 ### Example
 ```html
@@ -63,16 +63,16 @@ Author：[@dunizb](https://github.com/dunizb)
 |backward|时至今日（只能选择今天之前）|Boolean|否     |否     | false|
 |noToday|今天不行（不能选今天）|Boolean|否     |否     | false|
 
-## Events
+### Events
 |函数名 |       说明      |  参数          |
 |:------|:--------------|:--------------|
 |change |选择选项之后触发的事件| 选择的日期，如2017-09-09  |
 
-## Methods
+### Methods
 |方法名 |       说明    |
 |:------|:--------------|
 |open |显示组件|
 |hide |隐藏组件|
 
-## Slot
+### Slot
 显示在组件头部
