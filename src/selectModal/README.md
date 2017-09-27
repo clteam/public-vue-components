@@ -3,7 +3,7 @@
 Author：@dunizb
 
 ## screenshot
-![](screenshot.png)
+![screenshot.png](screenshot.png)
 
 ## Demo
 [demo.vue](demo.vue)
