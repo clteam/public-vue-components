@@ -1,5 +1,6 @@
-# select-modal
-模态选择组件
+# select-modal 模态选择组件
+
+Author：@dunizb
 
 ## screenshot
 ![](screenshot.png)
@@ -8,7 +9,7 @@
 [demo.vue](demo.vue)
 
 ## Props
-|属性名 |       说明      |  类型 |是否必须|是否双向绑定|默认值|
+|属性名|       说明      |  类型 |是否必须|是否双向绑定|默认值|
 |:------|:--------------|:------|:------|:-------|:-----|
 |data  |select中的所有选项|Array  |是     |否       | -   |
 |title |组件标题头        |String |否     |否       | -   |
@@ -22,7 +23,7 @@
 ## Methods
 |方法名 |       说明    |
 |:------|:--------------|
-|open |显示组件|
+|open |显示组件|
 |hide |隐藏组件|
 
 ## Slot
