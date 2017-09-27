@@ -8,6 +8,6 @@
 - 新增`datePicker`组件
 
 ## TO-DO
-- [ X ] datePicker, 日期选择组件
+- [X] datePicker, 日期选择组件
 - [ ] 答题组件
 - [ ] Checklist组件
