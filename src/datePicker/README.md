@@ -9,7 +9,7 @@ Author：[@dunizb](https://github.com/dunizb)
 [demo.vue](demo.vue)
 
 ## Install
-引入`cl-date-picker.vue`
+引入`src`中的所有文件，导入主文件：`cl-date-picker.vue`
 
 ## Usage
 

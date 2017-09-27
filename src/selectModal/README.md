@@ -9,7 +9,7 @@ Author：@dunizb
 [demo.vue](demo.vue)
 
 ## Install
-引入`select-modal.vue`
+引入`src/select-modal.vue`
 
 ## Usage
 
