@@ -62,11 +62,11 @@ Author：[@dunizb](https://github.com/dunizb)
 |currentIndex |是否显示当前页和总页数|Boolean |否     |否    | true|
 
 ### Events
-|函数名 |       说明      |  参数          |
+|事件名 |       说明      |  参数/返回值          |
 |:------|:--------------|:--------------|
-|change | 选择答题选项的时候触发 | 选择的选项，正确答案选项  |
+|change | 选择答题选项的时候触发 | answer：用户选择的选项，OKAnswer：正确的选项  |
 
 ### Methods
 |方法名 |       说明    |
 |:------|:--------------|
-|resetData |重置数据状态 |
+|resetData |重置数据状态 |
