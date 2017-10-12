@@ -48,6 +48,17 @@ Author：[@dunizb](https://github.com/dunizb)
     }
   }
 </script>
+
+<style scoped>
+  @import "../../assets/css/common.css";
+  .date-picker-desc{
+    padding-left: .37rem;
+    padding-top: .20rem;
+    line-height: 14px;
+    text-align: center;
+    color: rgb(159,159,159);
+  }
+</style>
 ```
 
 ### Props
