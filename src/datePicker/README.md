@@ -5,9 +5,6 @@ Author：[@dunizb](https://github.com/dunizb)
 ## screenshot
 ![screenshot.png](screenshot.png)
 
-## Demo
-[demo.vue](demo.vue)
-
 ## Install
 引入`src`中的所有文件，导入主文件：`cl-date-picker.vue`
 
@@ -64,7 +61,7 @@ Author：[@dunizb](https://github.com/dunizb)
 |noToday|今天不行（不能选今天）|Boolean|否     |否     | false|
 
 ### Events
-|函数名 |       说明      |  参数          |
+|事件名 |       说明      |  参数/返回值          |
 |:------|:--------------|:--------------|
 |change |选择选项之后触发的事件| 选择的日期，如2017-09-09  |
 
@@ -72,7 +69,7 @@ Author：[@dunizb](https://github.com/dunizb)
 |方法名 |       说明    |
 |:------|:--------------|
 |open |显示组件|
-|hide |隐藏组件|
+|hide |隐藏组件|
 
 ### Slot
 显示在组件头部
