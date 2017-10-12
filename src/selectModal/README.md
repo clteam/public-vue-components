@@ -5,9 +5,6 @@ Author：@dunizb
 ## screenshot
 ![screenshot.png](screenshot.png)
 
-## Demo
-[demo.vue](demo.vue)
-
 ## Install
 引入`src/select-modal.vue`
 
@@ -84,7 +81,7 @@ Author：@dunizb
 |multip|是否支持多选      |Boolean|否     |否       | false|
 
 ### Events
-|函数名 |       说明      |  参数          |
+|事件名 |       说明      |  参数/返回值          |
 |:------|:--------------|:--------------|
 |change |选择选项之后触发的事件|Object或Array，当props.multip = true时返回Array，否则返回Object  |
 
@@ -92,7 +89,7 @@ Author：@dunizb
 |方法名 |       说明    |
 |:------|:--------------|
 |open |显示组件|
-|hide |隐藏组件|
+|hide |隐藏组件|
 
 ### Slot
 |Slot |       说明    |
