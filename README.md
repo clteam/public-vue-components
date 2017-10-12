@@ -3,9 +3,9 @@
 
 ## Update
 
-:congratulations: 新增`answer`答题组件（2017-10-12）
-- 新增`select-modal`组件（2017-09-27）
-- 新增`datePicker`组件（2017-09-27）
+:congratulations: 新增[answer](https://github.com/clteam/public-vue-components/tree/master/src/answer)答题组件（2017-10-12）
+- 新增[select-modal](https://github.com/clteam/public-vue-components/tree/master/src/datePicker)组件（2017-09-27）
+- 新增[datePicker](https://github.com/clteam/public-vue-components/tree/master/src/selectModal)组件（2017-09-27）
 
 ## TO-DO
 
