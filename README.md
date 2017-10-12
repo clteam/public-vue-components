@@ -8,6 +8,8 @@
 - 新增`datePicker`组件（2017-09-27）
 
 ## TO-DO
+
+更多项目TODO和进度请查看[Projects](https://github.com/clteam/public-vue-components/projects/1)
 - [X] datePicker, 日期选择组件
 - [X] 答题组件
 - [ ] Checklist组件
