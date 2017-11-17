@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="c-select" v-if="isOpen">
+    <div class="c-date-picker" :class="{'translate': isOpen}">
       <div class="header" v-if="hasHeader">
         <span class="cancel" @click.stop="onCancel">取消</span>
         <span class="title">{{title}}</span>
@@ -19,7 +19,7 @@
           @hide="onComplete"></date-picker>
       </div>
     </div>
-    <div class="mask" v-if="isOpen" @click="hide"></div>
+    <div class="date-picker-mask" :class="{'translate': isOpen}"></div>
   </div>
 </template>
 
@@ -95,7 +95,7 @@
 </script>
 
 <style scoped>
-  .c-select{
+  .c-date-picker{
     position: fixed;
     bottom: 0;
     left: 0;
@@ -103,42 +103,55 @@
     background: #fff;
     width: 100%;
     font-size: 16px;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition:all .3s ;
   }
-  .c-select .header{
+  .c-date-picker.translate{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .c-date-picker .header{
     height: .90rem;
     line-height: .90rem;
     font-size: 16px;
     border-bottom: 1px solid rgb(217,217,217);
     text-align: center;
   }
-  .c-select .header span{
+  .c-date-picker .header span{
     display: inline-block;
   }
-  .c-select .header span.cancel{
+  .c-date-picker .header span.cancel{
     color: rgb(159,159,159);
     width: 20%;
     text-align: left;
   }
-  .c-select .header span.ok{
+  .c-date-picker .header span.ok{
     color: rgb(46,166,242);
     text-align: right;
     width: 20%;
   }
-  .c-select .header span.title{
+  .c-date-picker .header span.title{
     width: 50%;
     text-align: center;
   }
-  .c-select .content{
+  .c-date-picker .content{
     display: inline;
     text-align: center;
   }
-  .mask{
-    position: fixed;
-    z-index: 1000;
+  .date-picker-mask{
+    position: absolute;
     top: 0;
-    right: 0;
+    width: 100%;
+    height: 0%;
     left: 0;
-    bottom: 0;
+    background: rgba(0,0,0,0);
+    z-index: 1000;
+    -webkit-transition:all .3s ;
+    transition:all .3s ;
+  }
+  .date-picker-mask.translate{
+    height: 100%;
     background: rgba(0,0,0,.6);
   }
 </style>
