@@ -2,6 +2,8 @@
 基于 Vue.js 2.x 的移动端组件库公共组件库
 
 ## Update
+:rose: [answer](https://github.com/clteam/public-vue-components/tree/master/src/answer)答题组件（2017-11-17）
+- 小图标改为base64，不需要依赖小图片了
 
 :rose: [select-modal](https://github.com/clteam/public-vue-components/tree/master/src/selectModal)组件（2017-11-17）
 - 新增过渡动画[@dunizb](https://github.com/dunizb)
