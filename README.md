@@ -12,7 +12,7 @@
 
 ## Add
 
-- :congratulations: 新增[alert](https://github.com/clteam/public-vue-components/tree/master/src/alert)alert组件（2017-10-22）[@dunizb](https://github.com/dunizb)
+- :congratulations: 新增[alert](https://github.com/clteam/public-vue-components/tree/master/src/alert)弹出提示组件（2017-11-17）[@dunizb](https://github.com/dunizb)
 
 - 新增[message](https://github.com/clteam/public-vue-components/tree/master/src/message)消息提示组件（2017-10-22）[@dunizb](https://github.com/dunizb)
 - 新增[answer](https://github.com/clteam/public-vue-components/tree/master/src/answer)答题组件（2017-10-12）[@dunizb](https://github.com/dunizb)

@@ -8,7 +8,7 @@ Author：[@dunizb](https://github.com/dunizb)
 |![screenshot_0.png](screenshot_0.png)|![screenshot_1.png](screenshot_1.png)|
 
 ## Install
-引入`src`中的所有文件，导入主文件：`answer.vue`
+引入`src`中的所有文件，导入主文件：`alert.vue`
 
 ## Usage
 
