@@ -3,15 +3,17 @@
 
 ## Update
 
-:congratulations: :rose: :hibiscus:   
-:congratulations: [select-modal](https://github.com/clteam/public-vue-components/tree/master/src/datePicker)组件（2017-11-17）
+:rose: [select-modal](https://github.com/clteam/public-vue-components/tree/master/src/datePicker)组件（2017-11-17）
 - 新增过渡动画[@dunizb](https://github.com/dunizb)
 - `change` 事件名改为 `on-change` [@dunizb](https://github.com/dunizb)
 
-:congratulations: [datePicker](https://github.com/clteam/public-vue-components/tree/master/src/datePicker)组件（2017-09-27）
+:rose: [datePicker](https://github.com/clteam/public-vue-components/tree/master/src/datePicker)组件（2017-09-27）
 - 新增过渡动画[@dunizb](https://github.com/dunizb)
 
 ## Add
+
+- :congratulations: 新增[alert](https://github.com/clteam/public-vue-components/tree/master/src/alert)alert组件（2017-10-22）[@dunizb](https://github.com/dunizb)
+
 - 新增[message](https://github.com/clteam/public-vue-components/tree/master/src/message)消息提示组件（2017-10-22）[@dunizb](https://github.com/dunizb)
 - 新增[answer](https://github.com/clteam/public-vue-components/tree/master/src/answer)答题组件（2017-10-12）[@dunizb](https://github.com/dunizb)
 - 新增[select-modal](https://github.com/clteam/public-vue-components/tree/master/src/datePicker)组件（2017-09-27）[@dunizb](https://github.com/dunizb)
@@ -22,4 +24,9 @@
 更多项目TODO和进度请查看[Projects](https://github.com/clteam/public-vue-components/projects/1)
 - [X] datePicker, 日期选择组件
 - [X] 答题组件
+- [X] alert组件
 - [ ] Checklist组件
+
+## Test
+
+测试代码：[http://git.chelun.com/kjz_frontend/kjz-frontend/tree/public-vue-components](http://git.chelun.com/kjz_frontend/kjz-frontend/tree/public-vue-components)
