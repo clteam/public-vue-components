@@ -3,7 +3,7 @@
 
 ## Update
 
-:rose: [select-modal](https://github.com/clteam/public-vue-components/tree/master/src/datePicker)组件（2017-11-17）
+:rose: [select-modal](https://github.com/clteam/public-vue-components/tree/master/src/selectModal)组件（2017-11-17）
 - 新增过渡动画[@dunizb](https://github.com/dunizb)
 - `change` 事件名改为 `on-change` [@dunizb](https://github.com/dunizb)
 
