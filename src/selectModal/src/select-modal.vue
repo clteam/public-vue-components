@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="cl-select" :class="{'translate': isOpen, 'close-translate': !isOpen}">
+    <div class="cl-select" :class="{'translate': isOpen}">
       <div class="header">
         <span class="cancel" @click="onCancel">取消</span>
         <span class="title">{{title}}</span>
@@ -8,7 +8,7 @@
       </div>
       <slot name="top"></slot>
       <div class="content">
-        <div class="items" ref="items" @click="clickContent($event)">
+        <div class="items" ref="items" @click="clickItems($event)">
           <template v-for="(item,index) in data">
             <button :class="{'selected': item.selected}" :data-value="item.value">{{item.label}}</button>
           </template>
@@ -44,8 +44,8 @@
       hide () {
         this.isOpen = false
       },
-      _clickContent (event) {
-        let btns = this.$refs.contents.children
+      clickItems (event) {
+        let btns = this.$refs.items.children
         for (let i = 0; i < btns.length; i++) {
           btns[i].className = ''
         }
@@ -53,7 +53,7 @@
       },
       clickBtn (event) {
         if (!this.multip) {
-          this._clickContent(event)
+          this.clickItems(event)
         } else {
           let cls = event.target.className
           if (cls) {
@@ -64,7 +64,7 @@
         }
       },
       onComplete () {
-        let btns = this.$refs.contents.children
+        let btns = this.$refs.items.children
         let btn
         let res = []
         for (let i = 0; i < btns.length; i++) {
@@ -76,6 +76,7 @@
             })
           }
         }
+        this.onCancel()
         res.length === 1 ? this.$emit('on-change', res[0]) : this.$emit('on-change', res)
       },
       onCancel () {
@@ -98,13 +99,9 @@
     transform: translateY(100%);
     -webkit-transition:all .3s ;
   }
-  .c-select.translate{
+  .cl-select.translate{
     -webkit-transform: translateY(0);
     transform: translateY(0);
-  }
-  .c-select.close-translate{
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
   }
   .cl-select .header{
     height: .90rem;
@@ -140,7 +137,7 @@
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
   }
-  .c-select .content .items{
+  .cl-select .content .items{
     width: 82%;
     text-align: left;
   }
@@ -159,7 +156,7 @@
     border-color: rgb(46,166,242);
     color: rgb(46,166,242);
   }
-   .c-select .desc{
+  .c-select .desc{
     text-align: center;
     margin-bottom: 10px;
     color: rgb(159,159,159);
