@@ -14,7 +14,8 @@ Author：[@dunizb](https://github.com/dunizb)
 ```html
 <template>
   <div class="cl-div">
-    <a href="javascript:;" @click="showMessage">显示提示</a>
+    <a href="javascript:;" @click="showMessage1">显示提示1，显示3秒</a>
+    <a href="javascript:;" @click="showMessage1">显示提示2，显示3秒，参数为一个字符串</a>
 
     <message ref="message"></message>
   </div>
@@ -25,21 +26,18 @@ Author：[@dunizb](https://github.com/dunizb)
   export default {
     components: { message },
     methods: {
-      showMessage () {
+      showMessage1() {
         this.$refs.message.show({
           content: '谢谢参与',
           duration: 3
         })
+      },
+      showMessage2 () {
+        this.$refs.message.show('谢谢参与')
       }
     }
   }
 </script>
-
-<style scoped>
-  .cl-div{
-    text-align: center;
-  }
-</style>
 ```
 
 ### Methods

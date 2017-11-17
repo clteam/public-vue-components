@@ -1,6 +1,7 @@
 <template>
     <div>
-      <span v-if="isShow" class="cl-message" :style="styleObj" :class="{show: isShow}">{{content}}</span>
+      <span v-if="isShow" class="cl-message default"
+            :class="{'white': themes === 'white'}">{{content}}</span>
     </div>
 </template>
 
@@ -9,11 +10,9 @@
     data() {
       return {
         isShow: false,
-        content: '',
+        content: '下水道是',
         duration: 3,
-        styleObj: {
-          backgroundColor:  'rgba(138, 138, 139, 1)'
-        }
+        themes: 'default'
       }
     },
     methods: {
@@ -21,15 +20,10 @@
         if (!this._isEmptyObj(config)) {
           if (typeof config === 'string') {
             this.content = config
-            this.duration = 3
           } else {
             this.content = config.content
             if (config.duration) this.duration = config.duration
-            if (config.themes === 'white') {
-              this.styleObj.backgroundColor = '#fff'
-              this.styleObj.color = '#0d2e44'
-            }
-            if (config.bgColor) this.styleObj.backgroundColor = config.bgColor
+            if (config.themes === 'white') this.themes = config.themes
           }
         }
         this.isShow = true
@@ -51,21 +45,22 @@
 
 <style scoped>
   .cl-message{
-    transform: translate(-50%,-100%);
-    position: absolute;
-    top: -100%;
+    position: fixed;
+    top:30%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     color: #fff;
+    background-color: rgba(0, 0, 0, .7);
     padding: 5px 10px;
     font-size: 12px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
     z-index: 100;
-    box-shadow: 1px 1px 5px rgba(138, 138, 139, 1);
+    box-shadow: 0px 0px 10px rgba(138, 138, 139, 1);
   }
-  .show{
-    transform: translate(-50%,0%);
-    top: 20%;
+  .cl-message.white{
+    color: #000;
+    background-color: rgba(255, 255, 255, .7);
   }
-
 </style>
