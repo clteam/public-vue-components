@@ -16,7 +16,7 @@ Author：@dunizb
   <div class="cl-div">
     选择科目：<input v-model="subjectVal" readonly="readonly" @focus="openSubject" placeholder="请选择科目" type="text">
 
-    <select-modal ref="clselect" title="选择科目" :data="subjectData" :multip="true" @change="getValue">
+    <select-modal ref="clselect" title="选择科目" :data="subjectData" :multip="true" @on-change="getValue">
       <p slot="top" class="tip">*其它城市正在开通中，敬请期待</p>
       <p slot="bottom" class="tip">*其它城市正在开通中，敬请期待</p>
     </select-modal>
@@ -83,7 +83,7 @@ Author：@dunizb
 ### Events
 |事件名 |       说明      |  参数/返回值          |
 |:------|:--------------|:--------------|
-|change |选择选项之后触发的事件|Object或Array，当props.multip = true时返回Array，否则返回Object  |
+|on-change |选择选项之后触发的事件|Object或Array，当props.multip = true时返回Array，否则返回Object  |
 
 ### Methods
 |方法名 |       说明    |

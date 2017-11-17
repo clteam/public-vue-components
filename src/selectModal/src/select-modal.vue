@@ -1,21 +1,22 @@
 <template>
   <div>
-    <div class="cl-select" v-if="isOpen">
+    <div class="cl-select" :class="{'translate': isOpen, 'close-translate': !isOpen}">
       <div class="header">
         <span class="cancel" @click="onCancel">取消</span>
         <span class="title">{{title}}</span>
         <span class="ok" @click="onComplete">完成</span>
       </div>
       <slot name="top"></slot>
-      <div class="content" ref="contents">
-        <template v-for="(item,index) in data">
-          <button :class="{'selected': item.selected}" @click="clickBtn($event)" :data-value="item.value">{{item.label}}</button>
-        </template>
-        <p v-if="data.length === 0">暂无数据</p>
+      <div class="content">
+        <div class="items" ref="items" @click="clickContent($event)">
+          <template v-for="(item,index) in data">
+            <button :class="{'selected': item.selected}" :data-value="item.value">{{item.label}}</button>
+          </template>
+        </div>
       </div>
       <slot name="bottom"></slot>
     </div>
-    <div class="mask" v-if="isOpen" @click="isOpen = false"></div>
+    <div class="select-mask" :class="{'transition': isOpen}"></div>
   </div>
 </template>
 
@@ -75,7 +76,7 @@
             })
           }
         }
-        res.length === 1 ? this.$emit('change', res[0]) : this.$emit('change', res)
+        res.length === 1 ? this.$emit('on-change', res[0]) : this.$emit('on-change', res)
       },
       onCancel () {
         this.isOpen = false
@@ -93,6 +94,17 @@
     background: #fff;
     width: 100%;
     font-size: 14px;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition:all .3s ;
+  }
+  .c-select.translate{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .c-select.close-translate{
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
   }
   .cl-select .header{
     height: .90rem;
@@ -122,7 +134,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px .45rem;
+    padding: 10px 0;
+    overflow-y: auto;
+    max-height: 500px;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+  .c-select .content .items{
+    width: 82%;
+    text-align: left;
   }
   .cl-select .content button{
     width: 2.29rem;
@@ -139,13 +159,24 @@
     border-color: rgb(46,166,242);
     color: rgb(46,166,242);
   }
-  .mask{
-    position: fixed;
-    z-index: 1000;
+   .c-select .desc{
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(159,159,159);
+  }
+  .select-mask{
+    position: absolute;
     top: 0;
-    right: 0;
+    width: 100%;
+    height: 0%;
     left: 0;
-    bottom: 0;
+    background: rgba(0,0,0,0);
+    z-index: 1000;
+    -webkit-transition:all .3s ;
+    transition:all .3s ;
+  }
+  .select-mask.transition{
+    height: 100%;
     background: rgba(0,0,0,.6);
   }
 </style>
