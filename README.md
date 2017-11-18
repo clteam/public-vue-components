@@ -1,4 +1,4 @@
-# public-vue-components
+# 基于 Vue.js 2.x 的移动端公共业务组件库
 <div align="center"><img width="320" src="./logo.jpg"/></div>
 
 ## Update
