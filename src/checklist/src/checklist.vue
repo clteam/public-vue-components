@@ -9,7 +9,7 @@
       <div class="desc">您已选中 <span>{{checkboxValue.length}}</span> 个，最多可选<span>{{max}}</span>个</div>
       <div class="list" ref="list">
         <div v-for="(item, index) in dataList" class="line-wrapper" ﻿:data-val="item.label + '|' + item.value">
-          <label :for="index" class="line border-1px">
+          <label :for="index" class="line border-1px" :class="{'checkbox-left': checkboxLeft}">
             <div class="l">
               <div class="title">{{item.label}}</div>
               <div class="address" v-if="item.address">{{item.address}}</div>
@@ -36,6 +36,10 @@
       dataList: {
         type: Array,
         require: true
+      },
+      checkboxLeft: {
+        type: Boolean,
+        default: false
       }
     },
     data () {
@@ -170,6 +174,9 @@
     justify-content: center;
     align-items: center;
     height: 50px;
+  }
+  .list .line.checkbox-left{
+    flex-direction: row-reverse;
   }
   .list .line .l{
     display: -webkit-flex;

@@ -88,6 +88,7 @@ Author：@dunizb
 |:------|:--------------|:------|:------|:-------|:-----|
 |max  |最多选择几项|Number  |是     |否       | 0   |
 |dataList |数据        |Array |是     |否       | []   |
+|checkboxLeft |选框是否在左边 |Boolean |否     |否       | false   |
 
 ### Events
 |事件名 |       说明      |  参数/返回值          |
