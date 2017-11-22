@@ -1,11 +1,14 @@
 # Answer 答题组件
 
+[在线预览](http://h5kjz.chelun.com/2017/public-vue-components/answer.html)
+
 Author：[@dunizb](https://github.com/dunizb)
 
 ## screenshot
 | 未答题时 | 答题  |
 |:-------:|:------:|
 |![screenshot_0.png](screenshot_0.png)|![screenshot_1.png](screenshot_1.png)|
+
 
 ## Install
 引入`src`中的所有文件，导入主文件：`answer.vue`
