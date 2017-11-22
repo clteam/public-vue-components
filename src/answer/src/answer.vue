@@ -197,6 +197,7 @@
   .option li{
     line-height: .90rem;
     font-size: 16px;
+    clear: both;
   }
   .option .zebra-li li:nth-child(odd){
     background: #f7f7f7;
