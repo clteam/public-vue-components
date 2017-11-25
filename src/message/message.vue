@@ -7,7 +7,7 @@
 
 <script>
   export default {
-    data() {
+    data () {
       return {
         isShow: false,
         content: '下水道是',
@@ -37,7 +37,11 @@
       },
       _isEmptyObj (obj) {
         if (!obj) return true
-        return Object.keys(obj).length > 0 ? false : true
+        if (Object.keys(obj).length > 0) {
+          return false
+        } else {
+          return true
+        }
       }
     }
   }
