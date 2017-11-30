@@ -6,7 +6,7 @@ Author：@dunizb
 ![screenshot.gif](screenshot.gif)
 
 ## Install
-引入`src/checklist.vue`
+引入`src/checklist2.0.vue`
 
 ## Usage
 
@@ -22,7 +22,9 @@ Author：@dunizb
 
     <checklist ref="checklist"
                :data-list="data"
-               :max="2" @on-change="changeKaochangValue"></checklist>
+               :max="3" 
+               :checkboxLeft="false"
+               @on-confirm="getKaochangValue"></checklist>
   </div>
 </template>
 
@@ -74,7 +76,7 @@ Author：@dunizb
       openChecklist () {
         this.$refs['checklist'].show()
       },
-      changeKaochangValue (val) {
+      getKaochangValue (val) {
         this.kaochangVal = val
       }
     },
@@ -93,7 +95,8 @@ Author：@dunizb
 ### Events
 |事件名 |       说明      |  参数/返回值          |
 |:------|:--------------|:--------------|
-|on-change |点击确定之后触发的事件|Object  |
+|on-change |点击每一项之后触发的事件|Object  |
+|on-confirm |点击确定按钮之后触发的事件|Object  |
 
 ### Methods
 |方法名 |       说明    |
