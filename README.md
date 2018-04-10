@@ -1,5 +1,5 @@
 # 基于 Vue.js 2.x 的移动端公共业务组件库
-<div align="center"><img width="320" src="./logo.jpg"/></div>
+
 
 ## Update
 :rose: [answer](https://github.com/clteam/public-vue-components/tree/master/src/answer)答题组件（2017-11-17）
