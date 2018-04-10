@@ -33,4 +33,3 @@
 
 ## Test
 
-测试代码：[http://git.chelun.com/kjz_frontend/kjz-frontend/tree/public-vue-components](http://git.chelun.com/kjz_frontend/kjz-frontend/tree/public-vue-components)
